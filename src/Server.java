@@ -105,6 +105,10 @@ public class Server {
            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
            String inp = br.readLine();
            String[] tokens = inp.split(" ");
+           if(tokens[0].equals("ftpclient") == false){
+               System.out.println("INVALID COMMAND ENTERED! TERMINATING THE PROGRAM. ");
+               System.exit(1);
+           }
            int clientPort = Integer.parseInt(tokens[1]);
            Server s = new Server(clientPort);
            s.run();

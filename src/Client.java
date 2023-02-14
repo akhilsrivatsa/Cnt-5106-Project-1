@@ -44,6 +44,7 @@ public class Client {
                 dataOutputStream.write(buff, 0, bytes);
                 dataOutputStream.flush();
             }
+
             fileInputStream.close();
 
         }catch(Exception ex){
@@ -100,12 +101,16 @@ public class Client {
                 System.out.println("Entered Input is : " + tokens[0]);
 
                 if(tokens[0].equals(UPLOAD_FILE_MESSAGE)){
-                    System.out.println("Entered Here");
+
                     uploadFile(tokens[1]);
                 }
                 else if(tokens[0].equals(GET_FILE_MESSAGE)){
                     getFile(tokens[1]);
 
+                }else{
+                    System.out.println("Invalid Command Entered. Please follow the instructions - ");
+                    System.out.println("1) To upload the file - Enter upload filename");
+                    System.out.println("2) To download the file - Enter get filename");
                 }
 
             }

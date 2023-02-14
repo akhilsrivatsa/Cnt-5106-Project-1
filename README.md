@@ -15,3 +15,22 @@ Steps to Run the project -
 6) The input file directories are hardcoded in the client.Java file on line No 35 and 62.
 7) The output file directories are hardcoded in Server.java file on line No 38 and 56.
 8) The directories need to be updated as per user's local file directories.
+
+File Structure - 
+
+
+1) Client.java
+
+The client.java file is present at the client side. It accepts inputs from the client to upload and download the file. 
+The accepted commands are "get filename" and "upload filename". Any other commands will be termed invalid, and the user will be prompted 
+to enter the command again.
+
+2 )Server.java
+
+The server.java file is used to initialize the server. The port can be provided through the terminal. The server accepts command
+in the format "ftpclient 5016". Any other command will be termed invalid and the system will be terminated.
+
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
